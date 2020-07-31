@@ -1,28 +1,26 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <my-add></my-add>
+    <p>-------------------------------</p>
+    <my-sub></my-sub>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// eslint-disable-next-line no-unused-vars
+import Add from './components/Add.vue'
+// eslint-disable-next-line no-unused-vars
+import Sub from './components/Sub.vue'
 
 export default {
-  name: 'App',
+  data () {
+    return {}
+  },
   components: {
-    HelloWorld
+    // eslint-disable-next-line vue/no-unused-components
+    'my-add': Add,
+    // eslint-disable-next-line vue/no-unused-components
+    'my-sub': Sub
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
